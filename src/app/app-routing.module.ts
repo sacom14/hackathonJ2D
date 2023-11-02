@@ -4,8 +4,6 @@ import { CharacterPageComponent } from './rick-wiki/pages/character-page/charact
 
 const routes: Routes = [
   {path: 'characters', component: CharacterPageComponent},
-  // {path: 'episodes', component: EpisodesComponent},
-  // {path: 'locations', component: LocationsComponent},
   {path: '**', redirectTo: 'characters'}
 ];
 

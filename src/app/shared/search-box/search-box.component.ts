@@ -2,9 +2,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RickApiWikiService } from 'src/app/rick-wiki/services/rick-api-wiki.service';
 
 @Component({
-  selector: 'app-shearch-box',
-  templateUrl: './shearch-box.component.html',
-  styleUrls: ['./shearch-box.component.scss']
+  selector: 'app-search-box',
+  templateUrl: './search-box.component.html',
+  styleUrls: ['./search-box.component.scss']
 })
 export class ShearchBoxComponent {
   //direct reference to the templateUrl

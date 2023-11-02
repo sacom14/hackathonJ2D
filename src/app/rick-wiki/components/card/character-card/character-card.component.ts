@@ -5,11 +5,11 @@ import { RickApiWikiService } from 'src/app/rick-wiki/services/rick-api-wiki.ser
 @Component({
   selector: 'app-character-card',
   templateUrl: './character-card.component.html',
-  styleUrls: ['./character-card.component.scss']
 })
 export class CharacterCardComponent implements OnInit {
 
   public characterList: CharacterResult[]=[];
+
   constructor(private rickApiWikiService: RickApiWikiService) { }
 
   ngOnInit(): void {

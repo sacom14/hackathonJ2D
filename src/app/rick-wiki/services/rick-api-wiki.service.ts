@@ -12,21 +12,21 @@ export class RickApiWikiService {
   private _characterListBehavior = new BehaviorSubject<CharacterResult[]>(this._characterList);
 
   private _rickApiCharactersUrl: string = 'https://rickandmortyapi.com/api/character?page=';
+
   private _characterPagesNum: number = 1;
 
   private _tagsHistory: string[] = [];
 
+  //characters page
   public searchTag: string = '';
   public statusTag: string = '';
   public genderTag: string = '';
   public specieTag: string = '';
 
+
+  //getters
   get characterList() {
     return this._characterList;
-  }
-
-  get pagesNum() {
-    return this._characterPagesNum;
   }
 
   get characterListBehavior() {
@@ -40,7 +40,7 @@ export class RickApiWikiService {
   constructor(private http: HttpClient) {
     this.loadLocalStorage();
   }
-
+  // -----Character page--------
   getCharacters() {
 
     const params = new HttpParams()
@@ -50,7 +50,6 @@ export class RickApiWikiService {
       .set('species', this.specieTag)
 
     if (this._characterPagesNum <= 42 && this._characterPagesNum > 0) {
-
       this.http.get<CharacterResponse>(`${this._rickApiCharactersUrl}${this._characterPagesNum}`, { params }).subscribe(resp => {
         this.characterList.push(...resp.results);
         this._characterPagesNum++;
@@ -58,8 +57,6 @@ export class RickApiWikiService {
     }
     this._characterListBehavior.next(this.characterList);
   }
-
-
 
   takeSearchTag(tag: string) {
     this.resetParameters();
@@ -77,19 +74,17 @@ export class RickApiWikiService {
     this.genderTag = tag;
     this.getCharacters();
   }
-
   takeSpecieTag(tag: string) {
     this.resetParameters();
     this.specieTag = tag;
     this.getCharacters()
   }
-
   resetParameters() {
     this._characterList = [];
     this._characterPagesNum = 1;
   }
 
-  resetFilters(){
+  resetFilters() {
     this.searchTag = '';
     this.statusTag = '';
     this.genderTag = '';
@@ -107,7 +102,7 @@ export class RickApiWikiService {
 
   //-------search history-----------
   public organizeHistory(tag: string) {
-    if(tag.length === 0){
+    if (tag.length === 0) {
       this.getCharacters();
     }
     tag = tag.toLocaleLowerCase();
@@ -137,7 +132,9 @@ export class RickApiWikiService {
     this.takeSearchTag(this._tagsHistory[0]);
   }
 
-  private removeLocalStorage():void{
+  private removeLocalStorage(): void {
     localStorage.removeItem('historyTag');
   }
+
+
 }
