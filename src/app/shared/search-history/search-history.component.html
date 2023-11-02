@@ -1,0 +1,22 @@
+<!-- Hacer uno general de filters y que desplieguen los diferentes tipos de filtros que hauy y que estos despliguen más -->
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseHistory" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Search History
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseHistory" class="accordion-collapse collapse show">
+      <div class="list-group list-reset">
+        <button *ngFor="let tag of tagsHistory"
+        (click)="searchTag(tag)"
+        class="list-group-item list-group-item-action">
+          {{ tag | titlecase }}
+          <!-- titlecase => its a pipe visual for the tags history -->
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

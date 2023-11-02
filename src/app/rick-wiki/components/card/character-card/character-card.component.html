@@ -1,0 +1,27 @@
+<section class="">
+  <ng-container *ngIf="characterList.length > 0 else alert" >
+    <article class="row ">
+      <div *ngFor="let character of characterList" class="col-md-3 col-sm-6">
+        <div class="card mb-2 text-center bg-info">
+          <img src="{{ character.image }}" alt="{{ character.name }}" class="card-img-top">
+
+          <div class="card-body text-white">
+            <p class="card-text">
+              Name: {{character.name}} <br>
+              Gender: {{character.gender}} <br>
+              Status: {{character.status}} <br>
+              Specie: {{character.species}} <br>
+              Location: {{character.location.name}} <br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </ng-container>
+  <ng-template #alert>
+    <div class="alert alert-warning text-center">Any character with this description</div>
+  </ng-template>
+  <!-- <div class="d-flex justify-content-center">
+    <button (click)="scrollToTop()" *ngIf="showScrollButton" class="scroll-top-button">↑ Go Top</button>
+  </div> -->
+</section>

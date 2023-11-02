@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+.background{
+  background-image: url(../src/assets/img/espacio_oscuro.jpg)
+}
+$primary: #21a4bc;
+$secondary:#bbe51d;
+$success: #1f7d73;
+$info: #0c322e;
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
