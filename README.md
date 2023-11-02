@@ -1,27 +1,31 @@
-# RickAndMortyHackathonJ2Digital
+# Rick and Morty Hackathon Jump 2 Digital 2023
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
+![Rick and Morty Banner](https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg)
 
-## Development server
+## Descripción
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este proyecto es una página web desarrollada como parte de una prueba técnica para la Hackathon Jump 2 Digital 2023. La página web consume la API de Rick and Morty para proporcionar información detallada sobre los personajes de la serie.
 
-## Code scaffolding
+## Cómo compilar el proyecto
+- npm i
+- npm start o ng serve -o
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Acceso a la Página Web
 
-## Build
+Puedes acceder a demo [este enlace](https://hackathon-j2-d.vercel.app/characters).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Tecnologías Utilizadas
 
-## Running unit tests
+El proyecto se desarrolló utilizando las siguientes tecnologías:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Angular
+- Bootstrap
+  
+## Roadmap
+- Los usuarios tienen la posibilidad de filtrar por estado, género y especie.
+- También pueden buscar por el nombre del personaje en la barra del buscador.
+- Se guardan los últimos 5 parámetros escritos en el buscador.
+- Se puede hacer una limpieza de todo el filtro y también del historial de búsqueda.
 
-## Running end-to-end tests
+¡Esperamos que disfrutes explorando el universo de Rick and Morty a través de esta página web!
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
