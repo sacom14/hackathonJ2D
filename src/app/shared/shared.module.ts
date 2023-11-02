@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { ShearchBoxComponent } from './shearch-box/shearch-box.component';
 import { SearchHistoryComponent } from './search-history/search-history.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 
@@ -12,7 +13,8 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     HeaderComponent,
     ShearchBoxComponent,
     SearchHistoryComponent,
-    SideBarComponent
+    SideBarComponent,
+    NavBarComponent
   ],
   imports: [
     CommonModule
